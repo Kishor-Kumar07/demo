@@ -1,0 +1,12 @@
+from langchain.llms import OpenAI
+import os
+
+os.environ["OPENAI_API_KEY"] = "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"
+
+# llm = OpenAI(temperature=0.9)
+
+# text = "What would be a good company name for a company that makes colorful socks?"
+# print(llm(text))
+
+llm = OpenAI(model_name="text-ada-001", n=2, best_of=2)
+print(llm("Tell me a joke"))
